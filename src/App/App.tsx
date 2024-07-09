@@ -102,6 +102,10 @@ const App: FunctionComponent = () => {
         scroll_to_bottom();
       }
     });
+
+    return () => {
+      socket.disconnect();
+    };
   }, [socket]);
 
   return (
